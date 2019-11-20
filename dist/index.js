@@ -1,16 +1,12 @@
 #!/usr/bin/env node
-var mock = require('./mocker');
-var _a = require('canvas'), createCanvas = _a.createCanvas, loadImage = _a.loadImage;
-var clipboardy = require('clipboardy');
-var fs = require('fs');
-var path = require('path');
-var util = require('util');
-// import { default as mock } from './mocker';
-// import { createCanvas, loadImage, Image } from 'canvas';
-// import * as clipboardy from 'clipboardy';
-// import * as fs from 'fs';
-// import * as path from 'path';
-// import * as util from 'util';
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var mocker_1 = require("./mocker");
+var canvas_1 = require("canvas");
+var clipboardy = require("clipboardy");
+var fs = require("fs");
+var path = require("path");
+var util = require("util");
 var writeFile = util.promisify(fs.writeFile);
 var template_path = path.join(__dirname, 'template.jpg');
 var argv = require('yargs')
@@ -26,16 +22,16 @@ var argv = require('yargs')
 })
     .argv;
 var inputText = argv['_'].join(' ');
-var mockedText = mock(inputText);
+var mockedText = mocker_1.default(inputText);
 console.log(mockedText);
 if (argv.c) {
     clipboardy.writeSync(mockedText);
     console.log("Copied to clipboard.");
 }
 if (argv.o) {
-    loadImage(template_path)
+    canvas_1.loadImage(template_path)
         .then(function (img) {
-        var canvas = createCanvas(img.width, img.height);
+        var canvas = canvas_1.createCanvas(img.width, img.height);
         var ctx = canvas.getContext('2d');
         var center = img.width / 2;
         var fontSize = 256;

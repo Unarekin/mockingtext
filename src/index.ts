@@ -1,19 +1,12 @@
 #!/usr/bin/env node
 
-const mock = require('./mocker');
-const { createCanvas, loadImage } = require('canvas');
-const clipboardy = require('clipboardy');
-const fs = require('fs');
-const path = require('path');
-const util = require('util');
+import { default as mock } from './mocker';
+import { createCanvas, loadImage, Image } from 'canvas';
 
-// import { default as mock } from './mocker';
-// import { createCanvas, loadImage, Image } from 'canvas';
-
-// import * as clipboardy from 'clipboardy';
-// import * as fs from 'fs';
-// import * as path from 'path';
-// import * as util from 'util';
+import * as clipboardy from 'clipboardy';
+import * as fs from 'fs';
+import * as path from 'path';
+import * as util from 'util';
 
 const writeFile = util.promisify(fs.writeFile);
 
