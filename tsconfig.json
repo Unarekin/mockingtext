@@ -1,41 +1,28 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
-    "outFile": "./dist/index.js",
-    "module": "system",
-    "target": "es5",
-    "lib": ["es6", "dom"],
+    "outDir": "./dist/",
     "sourceMap": true,
-    "allowJs": true,
-    "jsx": "react",
+    "declaration": false,
     "moduleResolution": "node",
-    "rootDir": "./src",
-    "noImplicitReturns": true,
-    "noImplicitThis": false,
-    "noImplicitAny": false,
-    "strictNullChecks": false,
-    "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "resolveJsonModule": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2017",
+      "es2016",
+      "es2015",
+      "dom"
+    ]
   },
   "include": [
-    "./src/index.ts"
+    "src/index.ts",
   ],
   "exclude": [
-    "node_modules",
-    "build",
-    "scripts",
-    "acceptance-tests",
-    "webpack",
-    "jest",
-    "src/setupTests.ts",
-    "mochawesome-report",
-    "test",
-    "coverage"
-  ],
-  "types": [
-    "typePatches"
-  ],
-  "babel": {
-    "presets": [
-      "@babel/preset-react"
-    ]
-  }
+    "node_modules"
+  ]
 }
