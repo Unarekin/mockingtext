@@ -1,0 +1,29 @@
+{
+  "name": "mockingtext",
+  "version": "1.0.0",
+  "description": "A simple command-line tool to generate Spongebob-style mocking text.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Unarekin/mockingtext.git"
+  },
+  "author": "Erica Phelps <erica@blackspork.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Unarekin/mockingtext/issues"
+  },
+  "homepage": "https://github.com/Unarekin/mockingtext#readme",
+  "devDependencies": {
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.12.11",
+    "chai": "^4.2.0"
+  },
+  "dependencies": {
+    "canvas": "^2.6.0",
+    "clipboardy": "^2.1.0",
+    "yargs": "^15.0.2"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "outFile": "./dist/index.js",
+    "module": "system",
+    "target": "es5",
+    "lib": ["es6", "dom"],
+    "sourceMap": true,
+    "allowJs": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "rootDir": "./src",
+    "noImplicitReturns": true,
+    "noImplicitThis": false,
+    "noImplicitAny": false,
+    "strictNullChecks": false,
+    "allowSyntheticDefaultImports": true,
+  },
+  "include": [
+    "./src/index.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "build",
+    "scripts",
+    "acceptance-tests",
+    "webpack",
+    "jest",
+    "src/setupTests.ts",
+    "mochawesome-report",
+    "test",
+    "coverage"
+  ],
+  "types": [
+    "typePatches"
+  ],
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
+  }
+}
