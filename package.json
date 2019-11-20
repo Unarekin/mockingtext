@@ -6,6 +6,9 @@
   "scripts": {
     "test": "mocha"
   },
+  "bin": {
+    "mockingtext": "./dist/index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Unarekin/mockingtext.git"
