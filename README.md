@@ -1,4 +1,4 @@
-# rootfs 1.0
+# mockingtext 1.0
 [![][npm-badge]][npm-url] [![][issues-badge]][issues-url] [![][license-badge]][license-url]
 
 Simple Spongebob-style mocking text generator.
