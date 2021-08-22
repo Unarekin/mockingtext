@@ -1,10 +1,13 @@
 {
-  "name": "mockingtext",
+  "name": "@unarekin/mockingtext",
   "version": "1.0.4",
   "description": "A simple command-line tool to generate Spongebob-style mocking text.",
   "main": "dist/index.js",
   "scripts": {
     "test": "mocha"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "bin": {
     "mockingtext": "./dist/index.js"
